@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    place-items: center;
+}
+
+.player-info {
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    max-width: 25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.55), -1px -1px 20px rgba(255, 255, 255, 0.55);
+}
+
+.box {
+    height: 5rem;
+    width: 5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2.5rem;
+    /* padding: 10px; */
+}
+
+#box1,
+#box2,
+#box4,
+#box5 {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+#box3,
+#box6 {
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+
+#box7,
+#box8 {
+    border-right: 1px solid;
+}
+
+.newGameBtn {
+    color: white;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+
+
+.line {
+    position: absolute;
+    height: 10px;
+    width: 90%;
+    background-color: aqua;
+    box-shadow: 0px 0px 20px aqua;
+    border-radius: 10px;
+    transition: all 2s;
+    transform: scale(0);
+    transform-origin: left;
+}
+
+.row1 {
+    top: 19%;
+    left: 5%;
+}
+
+.row2 {
+    left: 5%;
+    top: 48%;
+}
+
+.row3 {
+    left: 5%;
+    top: 77%;
+}
+
+.col {
+    transform: scale(0) rotate(90deg);
+    top: 3%;
+    transition: all 2s;
+}
+
+.col1 {
+    left: 21%;
+}
+
+.col2 {
+    left: 50%;
+}
+
+.col3 {
+    left: 78.5%;
+}
+
+.diagonal1 {
+    transform: rotate(45deg) scale(0);
+    top: 13%;
+    left: 15%;
+    width: 100%;
+}
+
+.diagonal2 {
+    transform: rotate(135deg) scale(0);
+    top: 13%;
+    left: 85%;
+    width: 100%;
+}
+
+.diagonal1-active{
+    transform: rotate(45deg) scale(1);
+}
+
+.diagonal2-active{
+    transform: rotate(135deg) scale(1);
+}
+
+.col-active {
+    transform: scale(1) rotate(90deg);
+}
+
+.active {
+    transform: scale(1);
+}
+
+.box{
+    user-select: none;
+}
